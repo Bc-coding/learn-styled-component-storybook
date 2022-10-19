@@ -1,8 +1,7 @@
 import React from "react";
 import Task from "./Task";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTaskState } from "../lib/store";
-
+import { updateTaskState } from "../../helper/store";
 export default function TaskList() {
   // We're retrieving our state from the store
   const tasks = useSelector((state) => {
