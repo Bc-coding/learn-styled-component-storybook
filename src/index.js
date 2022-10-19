@@ -1,7 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Styled from "./pages/Styled";
+import Screen from "./pages/Screen";
+
+export default function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="styled" element={<Styled />} />
+            <Route path="screen" element={<Screen />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

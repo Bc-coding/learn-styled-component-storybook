@@ -5,12 +5,14 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "@storybook/addon-a11y": "^6.5.12",
+    "@storybook/test-runner": "^0.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "styled-theming": "^2.2.0",
@@ -22,7 +24,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-storybook": "test-storybook",
+    "init-msw": "msw init public/"
   },
   "eslintConfig": {
     "extends": [
@@ -65,7 +69,12 @@
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
     "babel-plugin-styled-components": "^2.0.7",
+    "msw": "^0.47.4",
+    "msw-storybook-addon": "^1.6.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.74.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
